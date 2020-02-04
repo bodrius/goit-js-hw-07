@@ -14,9 +14,9 @@ console.log(` В списке ${searchLi.length}, категории!`);
 // Количество элементов: 4
 
 searchLi.forEach(searcHesh => {
-  let searchH2 = searcHesh.querySelector("h2").textContent;
-  const searchLii = searcHesh.querySelectorAll(".item li");
-
-console.log(`Категория: ${searchH2}
-Количество элементов:${searchLii.length}`);
+  console.log(
+    `Категория: ${
+      searcHesh.querySelector("h2").textContent
+    } Количество элементов:${searcHesh.querySelectorAll(".item li").length}`
+  );
 });
