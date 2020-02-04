@@ -21,3 +21,4 @@ function writeCorrectQtySymbol(event) {
     checkInput.classList.remove("valid");
   }
 }
+//getAttribute() возвращает значение указанного атрибута элемента
