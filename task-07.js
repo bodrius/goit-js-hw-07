@@ -8,8 +8,9 @@ const input = document.querySelector("#font-size-control");
 const span = document.querySelector("#text");
 input.addEventListener("input", checkFontSize);
 function checkFontSize(event) {
-  span.style.fontSize = event.currentTarget.value + "px";
+  span.style.fontSize = event.target.value + "px";
 }
 
-//getElementById - Возвращает ссылку на элемент по его идентификатору (ID)
+
 //currentTarget - Определяет элемент, в котором в данный момент обрабатывается событие
+// target - элемент, на котором произошло событие 
