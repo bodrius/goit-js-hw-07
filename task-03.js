@@ -25,10 +25,17 @@ const images = [
 // Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
 
 const listImg = document.querySelector("#gallery");
+const fragment = document.createDocumentFragment();
 
 images.forEach(item => {
-  listImg.insertAdjacentHTML(
-    "afterbegin",
-    `<li> <img src='${item.url}' alt ='${item.alt}' width ='300' height='200'></li>`
-  );
+  const createLi = document.createElement("li");
+  const createImg = document.createElement("img");
+  createLi.prepend(createImg);
+  createImg.setAttribute("alt", item.alt);
+  createImg.setAttribute("src", item.url);
+  createImg.setAttribute("width", "400");
+  createImg.setAttribute("height", "250");
+  fragment.append(createLi);
 });
+
+listImg.prepend(fragment);
